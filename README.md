@@ -1,4 +1,4 @@
-# Morphos
+# Morphos test
 A morphological solution for Russian and English language written completely in PHP.
 
 [![Latest Stable Version](https://poser.pugx.org/wapmorgan/morphos/v/stable)](https://packagist.org/packages/wapmorgan/morphos)
