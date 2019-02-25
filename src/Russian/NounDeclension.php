@@ -440,4 +440,20 @@ class NounDeclension extends \morphos\BaseInflection implements Cases, Gender
             return $prefix.'е';
         }
     }
+
+    public static function setAbnormalExceptions($value) {
+        self::$abnormalExceptions[] = $value;
+    }
+
+    public static function setMasculineWithSoft($value) {
+        self::$masculineWithSoft[] = $value;
+    }
+
+    public static function setMasculineWithSoftAndRunAwayVowels($value) {
+        self::$masculineWithSoftAndRunAwayVowels[] = $value;
+    }
+
+    public static function setImmutableWords($value) {
+        self::$immutableWords[] = $value;
+    }
 }

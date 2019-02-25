@@ -289,4 +289,24 @@ class NounPluralization extends \morphos\NounPluralization implements Cases
             Cases::PREDLOJ => $prefix.$vowel.'х',
         ];
     }
+
+    public static function setAbnormalExceptions($value) {
+        self::$abnormalExceptions[] = $value;
+    }
+
+    public static function setNeuterExceptions($value) {
+        self::$neuterExceptions[] = $value;
+    }
+
+    public static function setGenitiveExceptions($value) {
+        self::$genitiveExceptions[] = $value;
+    }
+
+    public static function setImmutableWords($value) {
+        self::$immutableWords[] = $value;
+    }
+
+    public static function setRunawayVowelsExceptions($value) {
+        self::$runawayVowelsExceptions[] = $value;
+    }
 }
