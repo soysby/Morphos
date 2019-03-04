@@ -302,4 +302,20 @@ trait RussianLanguage
         return in_array(S::slice($noun, -2), ['ой', 'ий', 'ый', 'ая', 'ое', 'ее'])
             && !in_array($noun, ['гений', 'комментарий']);
     }
+
+    private static function setStaticArray(array &$list, array $data, bool $valueIsArray = null)
+    {
+        $value = reset($data);
+        $key = key($data);
+
+        if (is_array($value) && !$valueIsArray) {
+            $value = array_shift($value);
+        }
+
+        if (is_numeric($key)) {
+            $list[] = $value;
+        } else {
+            $list[$key] = $value;
+        }
+    }
 }

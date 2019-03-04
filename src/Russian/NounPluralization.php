@@ -290,23 +290,23 @@ class NounPluralization extends \morphos\NounPluralization implements Cases
         ];
     }
 
-    public static function setAbnormalExceptions($value) {
-        self::$abnormalExceptions[] = $value;
+    public static function setAbnormalExceptions(array $value) {
+        static::setStaticArray(self::$abnormalExceptions, $value, true);
     }
 
-    public static function setNeuterExceptions($value) {
-        self::$neuterExceptions[] = $value;
+    public static function setNeuterExceptions(array $value) {
+        static::setStaticArray(self::$neuterExceptions, $value);
     }
 
-    public static function setGenitiveExceptions($value) {
-        self::$genitiveExceptions[] = $value;
+    public static function setGenitiveExceptions(array $value) {
+        static::setStaticArray(self::$genitiveExceptions, $value);
     }
 
-    public static function setImmutableWords($value) {
-        self::$immutableWords[] = $value;
+    public static function setImmutableWords(array $value) {
+        static::setStaticArray(self::$immutableWords, $value);
     }
 
-    public static function setRunawayVowelsExceptions($value) {
-        self::$runawayVowelsExceptions[] = $value;
+    public static function setRunawayVowelsExceptions(array $value) {
+        static::setStaticArray(self::$runawayVowelsExceptions, $value);
     }
 }

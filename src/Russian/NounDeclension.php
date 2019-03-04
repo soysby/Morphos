@@ -441,19 +441,19 @@ class NounDeclension extends \morphos\BaseInflection implements Cases, Gender
         }
     }
 
-    public static function setAbnormalExceptions($value) {
-        self::$abnormalExceptions[] = $value;
+    public static function setAbnormalExceptions(array $value) {
+        static::setStaticArray(self::$abnormalExceptions, $value, true);
     }
 
-    public static function setMasculineWithSoft($value) {
-        self::$masculineWithSoft[] = $value;
+    public static function setMasculineWithSoft(array $value) {
+        static::setStaticArray(self::$masculineWithSoft, $value);
     }
 
-    public static function setMasculineWithSoftAndRunAwayVowels($value) {
-        self::$masculineWithSoftAndRunAwayVowels[] = $value;
+    public static function setMasculineWithSoftAndRunAwayVowels(array $value) {
+        static::setStaticArray(self::$masculineWithSoftAndRunAwayVowels, $value);
     }
 
-    public static function setImmutableWords($value) {
-        self::$immutableWords[] = $value;
+    public static function setImmutableWords(array $value) {
+        static::setStaticArray(self::$immutableWords, $value);
     }
 }
